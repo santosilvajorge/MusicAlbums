@@ -1,12 +1,425 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MyMusic</title>
-</head>
-<body>
-    
-</body>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+      integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body class="bg-light .text-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="https://open.spotify.com/user/11183361835"
+        >Play</a
+      >
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://open.spotify.com/">spotify.com</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Dropdown
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">My favourites</a>
+              <a class="dropdown-item" href="#">another one</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">What you need</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled">more</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input
+            class="form-control mr-sm-4"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+            Search
+          </button>
+        </form>
+      </div>
+    </nav>
+
+    <div class="container-fluid px-1 ">
+      <div class="card-deck row pt-5 ">
+        <div class="card col-xl-3 col-md-4 col-sm-6">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/pt/thumb/d/da/Pearl_Jam_-_Ten.jpg/220px-Pearl_Jam_-_Ten.jpg"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title-band">Ten - Pearl Jam</h5>
+            <br />
+            <p class="card-launch-gener">
+              1991
+              <br />
+              Gunge / Hard Rock / Alternative Rock
+            </p>
+          </div>
+          <div class="card-footer px-5">
+            <small class="text-muted">Duration - 53:33h</small>
+          </div>
+        </div>
+        <div class="card col-xl-3 col-3 col-md-4 col-sm-6">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/pt/0/06/Foo_Fighters_-_One_by_One.jpg"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title-band">One by One - Foo Fighters</h5>
+            <br />
+            <p class="card-launch-gener">
+              2002
+              <br />
+              Alternative Rock
+            </p>
+          </div>
+          <div class="card-footer px-5">
+            <small class="text-muted">Duration - 55:11h</small>
+          </div>
+        </div>
+
+        <div class="card col-xl-3 col-md-4 col-sm-6">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/pt/5/52/Muse_the2ndlaw.jpg"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title-band">The 2nd Law - Muse</h5>
+            <br />
+            <p class="card-launch-gener">
+              2012
+              <br />
+              Eletronic Rock / New Progressive
+            </p>
+          </div>
+          <div class="card-footer px-5">
+            <small class="text-muted">Duration - 53:49h</small>
+          </div>
+        </div>
+
+        <div class="card col-xl-3 col-md-4 col-sm-6">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/pt/3/3f/Night_Visions_Album_Cover.jpeg"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title-band">Night Visions - Imagine Dragons</h5>
+            <br />
+            <p class="card-launch-gener">
+              2012
+              <br />
+              Indie Rock / Alternative Rock
+            </p>
+          </div>
+          <div class="card-footer px-5">
+            <small class="text-muted">Duration - 42:10h</small>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row pt-5">
+        <div class="card-fav-img col-4">
+          <br />
+          <br />
+          <img
+            src="https://upload.wikimedia.org/wikipedia/pt/1/1a/J_Balvin_-_Colores.png"
+            alt=""
+          />
+        </div>
+        <div class="card-fav-text col-8">
+          <h4 class="card-title-band">Colores - Jay Balvin</h4>
+          <h6 class="card-gener">Universal Latin</h6>
+          <h6>2020</h6>
+          <div class="row">
+            <div class="songs col-4">
+              <ol>
+                <li>Amarillo</li>
+                <li>Azul</li>
+                <li>Rojo</li>
+                <li>Rosa</li>
+                <li>Morado</li>
+                <li>Verde</li>
+                <li>Negro</li>
+                <li>Gris</li>
+                <li>Arcoíris</li>
+                <li>Blanco</li>
+              </ol>
+            </div>
+            <div class="description col-8">
+              <p>
+                <br />
+                The album's central concept is colors, with each track named
+                after a color (except "Arcoiris", the Spanish term for rainbow).
+                Balvin collaborated with the Japanese artist Takashi Murakami
+                for the music videos and album and single artworks, which
+                notably feature Murakami's flowers, as well as American clothing
+                brand Guess on a capsule collection inspired by the album.
+                <br />
+                <br />
+                The album was announced at the end of January 2020.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h2 class="mt-5 ml-5 pl-5">hall of shame :</h2>
+    <div
+      id="carouselExampleSlidesOnly "
+      class="carousel slide"
+      data-ride="carousel"
+    >
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            class="w-75 ml-5 pl-5 d-block"
+            src="https://i.insider.com/5984a9074fc3c023008b5955?width=800&format=jpeg&auto=webp"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            class="w-75 ml-5 pl-5 d-block"
+            src="https://i.insider.com/5984b9184fc3c0be3f8b5216?width=800&format=jpeg&auto=webp"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            class="w-75 ml-5 pl-5 d-block"
+            src="https://i.insider.com/5b6dde731982d834008b4f73?width=800&format=jpeg&auto=webp"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row mt-3 ">
+        <div class="col-2 p-0">
+          <img
+            class="d-block w-100"
+            src="https://www.magazine-hd.com/apps/wp/wp-content/uploads/2018/12/jon-hopkins-singularity-2018.jpg"
+            alt=""
+          />
+        </div>
+        <div class="col-2 p-0">
+            <img
+              class="d-block w-100"
+              src="https://www.magazine-hd.com/apps/wp/wp-content/uploads/2018/12/efrim-manuel-menuck-pissing-stars.jpg"
+              alt=""
+            />
+          </div>
+          <div class="col-2 p-0">
+            <img
+              class="d-block w-100"
+              src="https://www.magazine-hd.com/apps/wp/wp-content/uploads/2018/12/lets-eat-grandma-i-am-all-ears.jpg"
+              alt=""
+            />
+          </div>
+          <div class="col-2 p-0">
+            <img
+              class="d-block w-100"
+              src="https://www.magazine-hd.com/apps/wp/wp-content/uploads/2018/12/the-goon-sax-we-are-not-talking.jpg"
+              alt=""
+            />
+          </div>
+          <div class="col-2 p-0">
+            <img
+              class="d-block w-100"
+              src="https://www.magazine-hd.com/apps/wp/wp-content/uploads/2018/12/kurt-vile-bottle-it-in.jpg"
+              alt=""
+            />
+          </div>
+          <div class="col-2 p-0">
+            <img
+              class="d-block w-100"
+              src="https://www.magazine-hd.com/apps/wp/wp-content/uploads/2018/12/anna-calvi-hunter.jpg"
+              alt=""
+            />
+          </div>
+          <div class="col-2 p-0">
+            <img
+              class="d-block w-100"
+              src="https://www.magazine-hd.com/apps/wp/wp-content/uploads/2018/12/mount-eerie-now-only.jpg"
+              alt=""
+            />
+          </div>
+          <div class="col-2 p-0">
+            <img
+              class="d-block w-100"
+              src="https://www.magazine-hd.com/apps/wp/wp-content/uploads/2018/12/suspiria-thom-yorke.jpg"
+              alt=""
+            />
+          </div>
+          <div class="col-2 p-0">
+            <img
+              class="d-block w-100"
+              src="https://www.magazine-hd.com/apps/wp/wp-content/uploads/2018/12/hookworms-microshift.jpg"
+              alt=""
+            />
+          </div>
+          <div class="col-2 p-0">
+            <img
+              class="d-block w-100"
+              src="https://www.magazine-hd.com/apps/wp/wp-content/uploads/2018/12/young-jesus-the-whole-thing-is-just-there.jpg"
+              alt=""
+            />
+          </div>
+          <div class="col-2 p-0">
+            <img
+              class="d-block w-100"
+              src="https://www.magazine-hd.com/apps/wp/wp-content/uploads/2018/12/tomberlin-at-weddings.jpg"
+              alt=""
+            />
+          </div>
+          <div class="col-2 p-0">
+            <img
+              class="d-block w-100"
+              src="https://www.magazine-hd.com/apps/wp/wp-content/uploads/2018/12/idles-joy-as-an-act-of-resistance.jpg"
+              alt=""
+            />
+          </div>
+          <div class="col-2 p-0">
+            <img
+              class="d-block w-100"
+              src="https://www.magazine-hd.com/apps/wp/wp-content/uploads/2018/12/parquet-courts-wide-awake.jpg"
+              alt=""
+            />
+          </div>
+          <div class="col-2 p-0">
+            <img
+              class="d-block w-100"
+              src="https://www.magazine-hd.com/apps/wp/wp-content/uploads/2018/12/boygenius-boygenius.jpg"
+              alt=""
+            />
+          </div>
+          <div class="col-2 p-0">
+            <img
+              class="d-block w-100"
+              src="https://www.magazine-hd.com/apps/wp/wp-content/uploads/2018/12/snail-mail-lush.jpg"
+              alt=""
+            />
+          </div>
+          <div class="col-2 p-0">
+            <img
+              class="d-block w-100"
+              src="https://www.magazine-hd.com/apps/wp/wp-content/uploads/2018/12/iceage-beyondless.jpg"
+              alt=""
+            />
+          </div>
+          <div class="col-2 p-0">
+            <img
+              class="d-block w-100"
+              src="https://www.magazine-hd.com/apps/wp/wp-content/uploads/2018/12/half-waif-lavender.jpg"
+              alt=""
+            />
+          </div>
+          <div class="col-2 p-0">
+            <img
+              class="d-block w-100"
+              src="https://www.magazine-hd.com/apps/wp/wp-content/uploads/2018/06/lucy-dacus-historian-matador.jpg"
+              alt=""
+            />
+          </div>
+          <div class="col-2 p-0">
+            <img
+              class="d-block w-100"
+              src="https://www.magazine-hd.com/apps/wp/wp-content/uploads/2018/12/cloud-nothings-last-building-burning.jpg"
+              alt=""
+            />
+          </div>
+          <div class="col-2 p-0">
+            <img
+              class="d-block w-100"
+              src="https://www.magazine-hd.com/apps/wp/wp-content/uploads/2018/12/interpol-marauder.jpg"
+              alt=""
+            />
+          </div>
+          <div class="col-2 p-0">
+            <img
+              class="d-block w-100"
+              src="https://www.magazine-hd.com/apps/wp/wp-content/uploads/2018/12/wild-pink-yolk-in-the-fur.jpg"
+              alt=""
+            />
+          </div>
+          <div class="col-2 p-0">
+            <img
+              class="d-block w-100"
+              src="https://www.magazine-hd.com/apps/wp/wp-content/uploads/2018/12/mitski-be-the-cowboy.jpg"
+              alt=""
+            />
+          </div>
+          <div class="col-2 p-0">
+            <img
+              class="d-block w-100"
+              src="https://www.magazine-hd.com/apps/wp/wp-content/uploads/2018/12/low-double-negative-600x600.jpg"
+              alt=""
+            />
+          </div>
+          <div class="col-2 p-0">
+            <img
+              class="d-block w-100"
+              src="https://www.magazine-hd.com/apps/wp/wp-content/uploads/2018/06/beach-house-7-sub-pop.jpg"
+              alt=""
+            />
+          </div>
+
+      </div>
+    </div>
+
+    <footer> 
+        <h4 class="pl-3 mt-2">copyright Jorge Silva</h4>
+    </footer>
+
+  </body>
 </html>
