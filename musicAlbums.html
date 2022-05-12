@@ -11,6 +11,20 @@
       integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
       crossorigin="anonymous"
     />
+
+    <style>
+      .card {
+        position: relative;
+      }
+      .badge {
+        position: absolute;
+        width: 25%;
+        left: 5px;
+        top: 5px;
+      }
+
+    </style>
+
     <script
       src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -59,13 +73,16 @@
               data-toggle="dropdown"
               aria-expanded="false"
             >
-              Dropdown
+              Rock ON
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">My favourites</a>
-              <a class="dropdown-item" href="#">another one</a>
+              <a class="dropdown-item" href="#">Alternative Rock</a>
+              <a class="dropdown-item" href="#">Grunge</a>
+              <a class="dropdown-item" href="#">Eletronic</a>
+              <a class="dropdown-item" href="#">New Progressive</a>
+              <a class="dropdown-item" href="#">Indie Rock</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">What you need</a>
+              <a class="dropdown-item" href="#">What you need !</a>
             </div>
           </li>
           <li class="nav-item">
@@ -87,22 +104,24 @@
     </nav>
 
     <div class="jumbotron">
-      <h1 class="display-4">This is Our Music World</h1>
+      <h1 class="display-4 ">This is Our Music World</h1>
       <p class="lead">We use this website to discuss some of the best and worst Albuns of the Music Era</p>
       <hr class="my-4">
       <p>Here you can find more about the music industry.</p>
-      <a class="btn btn-primary btn-lg" href="https://en.wikipedia.org/wiki/Music_history" role="button">click for more</a>
+      <a class="btn btn-primary btn-success btn-lg" href="https://en.wikipedia.org/wiki/Music_history" role="button">click for more</a>
     </div>
 
     <div class="container-fluid px-1 ">
       <div class="card-deck row pt-5 ">
         <div class="card col-xl-3 col-md-4 col-sm-6">
+          <span class="badge badge-pill badge-success">Rock</span>
           <img
             src="https://upload.wikimedia.org/wikipedia/pt/thumb/d/da/Pearl_Jam_-_Ten.jpg/220px-Pearl_Jam_-_Ten.jpg"
             class="card-img-top"
             alt="..."
           />
           <div class="card-body">
+            
             <h5 class="card-title-band">Ten - Pearl Jam</h5>
             <br />
             <p class="card-launch-gener">
@@ -116,6 +135,7 @@
           </div>
         </div>
         <div class="card col-xl-3 col-3 col-md-4 col-sm-6">
+          <span class="badge badge-pill badge-success">Rock</span>
           <img
             src="https://upload.wikimedia.org/wikipedia/pt/0/06/Foo_Fighters_-_One_by_One.jpg"
             class="card-img-top"
@@ -136,6 +156,7 @@
         </div>
 
         <div class="card col-xl-3 col-md-4 col-sm-6">
+          <span class="badge badge-pill badge-success">Rock</span>
           <img
             src="https://upload.wikimedia.org/wikipedia/pt/5/52/Muse_the2ndlaw.jpg"
             class="card-img-top"
@@ -156,6 +177,7 @@
         </div>
 
         <div class="card col-xl-3 col-md-4 col-sm-6">
+          <span class="badge badge-pill badge-success">Rock</span>
           <img
             src="https://upload.wikimedia.org/wikipedia/pt/3/3f/Night_Visions_Album_Cover.jpeg"
             class="card-img-top"
