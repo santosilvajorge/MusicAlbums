@@ -12,13 +12,6 @@
       crossorigin="anonymous"
     />
 
-    <!-- ?? 4) Create a new section with an album tracklist inside a 
-      Bootstrap table. The row colors of the table must be alternated. 
-      There should be a column for the track order number, 
-      one for the title, one for the artist name and one for 
-      the track duration. (you can also add extra columns)?? -->
-
-
     <style>
       .card {
         position: relative;
@@ -28,6 +21,21 @@
         width: 25%;
         left: 5px;
         top: 5px;
+      }
+      .btn-outline-success:hover {
+        box-shadow: 1px 15px 10px 5px rgba(128, 128, 128, 0.781);
+      }
+      .modal-body {
+        position: absolute;
+        left: 30%;
+        z-index: 3;
+        visibility: hidden;
+        background-color: rgb(245, 238, 229);
+        font-size: larger;
+      }
+      .data {
+        display: flex;
+        
       }
     </style>
 
@@ -222,9 +230,9 @@
           />
         </div>
         <div class="card-fav-text col-8">
-          <h4 class="card-title-band">Colores - Jay Balvin</h4>
-          <h6 class="card-gener">Universal Latin</h6>
-          <h6>2020</h6>
+          <h4 class="card-title-band ml-3">Colores - Jay Balvin</h4>
+          <h6 class="card-gener ml-4">Universal Latin</h6>
+          <h6 class="ml-4">2020</h6>
           <div class="row">
             <div class="songs col-4">
               <ol>
@@ -242,7 +250,6 @@
             </div>
             <div class="description col-8">
               <p>
-                <br />
                 The album's central concept is colors, with each track named
                 after a color (except "Arcoiris", the Spanish term for rainbow).
                 Balvin collaborated with the Japanese artist Takashi Murakami
@@ -271,40 +278,67 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
+        <tr id="myDIV1">
           <th scope="row">1</th>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
-          <td></td>
-          <td><button type="button" class="btn btn-outline-light">Light</button></td>
+          <td>Ten</td>
+          <td>Pearl Jam</td>
+          <td>53:33h</td>
+          <td>1991</td>
+          <td><button type="button" onclick="myFunction1()" class="btn btn-outline-danger">DELETE</button></td>
         </tr>
-        <tr>
+        <tr id="myDIV2">
           <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-          <td></td>
-          <td><button type="button" class="btn btn-outline-light">Light</button></td>
+          <td>One by One</td>
+          <td>Foo Fighters</td>
+          <td>55:11h</td>
+          <td>2002</td>
+          <td><button type="button" onclick="myFunction2()" class="btn btn-outline-danger">DELETE</button></td>
         </tr>
-        <tr>
+        <tr id="myDIV3">
           <th scope="row">3</th>
-          <td>Larry</td>
-          <td>the Bird</td>
-          <td>@twitter</td>
-          <td></td>
-          <td><button type="button" class="btn btn-outline-light">Light</button></td>
+          <td>The 2nd Law</td>
+          <td>Muse</td>
+          <td>53:49h</td>
+          <td>2012</td>
+          <td><button type="button" onclick="myFunction3()" class="btn btn-outline-danger">DELETE</button></td>
+          
         </tr>
         <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td><td><button type="button" class="btn btn-outline-light">Light</button></td></td>
+          <td>-</td>
+          <td>...</td>
+          <td>...</td>
+          <td>...</td>
+          <td>...<td>
+            <button type="button" onclick="popUpAddTrack()" class="btn btn-outline-success">Add Track</button></td></td> 
+          
+          <div>
+            <div class="modal-body" id="popUp">
+              <h5>Please complete the DATA</h5>
+              <br>
+              <div class="data">
+                <p>Title:</p>
+                <input id="title" type="text">
+                <p>Artist/Band name:</p>
+                <input id="Artist" type="text">
+                <hr>
+                <p>Duration:</p>
+                <input id="duration" type="time"> 
+                <p>Year:</p>
+                <input id="year" type="number">
+                <hr>
+              </div>
+              <h5>Are you ready to ADD this one?</h5>
+              <a href="#" class="btn btn-success">ADD</a>
+              <a href="#" onclick="closeButton" class="btn btn-secondary" title="Popover title">CLOSE</a>
+            </div>
+          </div>
+
+        </div>
         </tr>
       </tbody>
     </table>
 
+    
     <h2 class="mt-5 ml-5 pl-5">hall of shame :</h2>
     <div
       id="carouselExampleSlidesOnly "
@@ -509,5 +543,46 @@
     <footer>
       <h4 class="pl-3 mt-2">copyright Jorge Silva</h4>
     </footer>
+
+    <script>
+      function myFunction1() {
+  var x = document.getElementById("myDIV1");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+function myFunction2() {
+  var x = document.getElementById("myDIV2");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+function myFunction3() {
+  var x = document.getElementById("myDIV3");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+
+  let popUp = document.getElementById('popUp');
+  let addTrack = document.getElementsByClassName('btn-outline-success');
+
+  function popUpAddTrack () {
+    popUp.style.visibility = "visible";
+}
+  function closeButton () {
+    popUp.style.visibility = "invisible";
+}
+
+    </script>
   </body>
 </html>
