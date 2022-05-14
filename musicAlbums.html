@@ -33,10 +33,7 @@
         background-color: rgb(245, 238, 229);
         font-size: larger;
       }
-      .data {
-        display: flex;
-        
-      }
+      
     </style>
 
     <script
@@ -315,16 +312,20 @@
             <div class="modal-body" id="popUp">
               <h5>Please complete the DATA</h5>
               <br>
-              <div class="data">
-                <p>Title:</p>
-                <input id="title" type="text">
-                <p>Artist/Band name:</p>
-                <input id="Artist" type="text">
+              <div class="container data">
+                <div class="row">
+                  <p class="col-6">Title:</p>
+                  <p class="col-6">Artist/Band name:</p>
+                  <input class="col-6" id="title" type="text">
+                  <input class="col-6" id="Artist" type="text">
+                </div>
                 <hr>
-                <p>Duration:</p>
-                <input id="duration" type="time"> 
-                <p>Year:</p>
-                <input id="year" type="number">
+                <div class="row">
+                  <p class="col-6">Duration:</p>
+                  <p class="col-6">Year:</p>
+                  <input class="col-6" id="duration" type="time">
+                  <input class="col-6" id="year" type="number">
+                </div>
                 <hr>
               </div>
               <h5>Are you ready to ADD this one?</h5>
